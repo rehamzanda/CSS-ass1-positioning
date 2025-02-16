@@ -1,0 +1,108 @@
+/*CSS reset, don't mind it for now. */
+*{
+    margin: 5px;
+    padding: 5px;
+   }
+   #container{
+    width: 950px;
+    background-color: silver;
+    margin: 0px auto;
+   }
+   #header{
+    height: 150px;
+    background-color: blue;
+   }
+   #nav_bar{
+    height: 300px;
+    width: 180px;
+    background-color: red; 
+   }
+   #main_content{
+    min-height: auto;
+    width: 725px;
+    background-color: yellow; 
+   }
+   .subcontent{
+    height: 200px;
+    width: 200px;
+    background-color: purple;
+   }
+   #advertisements{
+    height: 90px;
+    width: 670px;
+    background-color: pink;
+   }
+
+   /* .container{
+    display: grid;
+    grid-template-areas: 
+    "one"
+    "two"
+    "three";
+   } */
+
+   /* @media only screen and (min-width: 70%) {
+   .container{
+      position: relative;
+    display: grid;
+    grid-template-areas: 
+    "one one one"
+    "two three three";
+   }
+   #main_content{
+      box-sizing: border-box;
+      position: absolute;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      align-content: center;
+     }
+   */
+
+   .container{
+     
+    display: grid;
+    grid-template-areas: 
+    "one one one"
+    "two three three";
+   }
+   #main_content{
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      align-content: center;
+     }
+
+   @media only screen and (max-width:90vw){
+   #main_content{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-height: auto;
+    align-items: center;
+   }
+   .container{
+      position: relative;
+      display: grid;
+      grid-template-areas: 
+      "one"
+      "two"
+      "three";
+     }
+   }
+
+   
+   #header{
+    grid-area: one;
+   }
+
+   #nav_bar{
+    grid-area: two;
+   }
+
+    #main_content{
+    grid-area: three;
+   }
+
+
+   
